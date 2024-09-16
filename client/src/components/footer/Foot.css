@@ -1,0 +1,83 @@
+.footer {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  
+  .foot {
+    display: flex;
+    justify-content: space-around;
+    background-color: #28a745;
+    padding: 40px 20px;
+  }
+  
+  .box1 {
+    width: 30rem;
+    display: flex;
+    gap:2rem;
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .footlink{
+        text-decoration: none;
+        text-align: left;
+        color: black;
+        margin-bottom: 3px;
+        margin-left: 2px;
+    }
+    .footlink:hover{
+        color:#f93c35;
+    }
+  }
+  .parag{
+    width:13rem;
+    text-align: left;
+    margin-top: 1.4rem;
+    color:black;
+  }
+  .cart {
+    font-size: 10rem;
+  }
+  
+  .subscribeSection {
+    margin-bottom: 20px;
+  }
+  
+  .subscribeForm {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .buttonHover {
+    background-color: #f93c35;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    height: 40px;
+    background-color: black;
+    display: grid;
+    align-items: center;
+    color: white;
+  }
+  
