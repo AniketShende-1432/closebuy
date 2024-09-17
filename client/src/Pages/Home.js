@@ -30,14 +30,6 @@ const Home = () => {
     const [activeLink, setActiveLink] = useState('');
 
     const navigate = useNavigate()
-
-    // useEffect(() => {
-    //     if (!isLoggedIn) {
-    //         navigate('/login')
-    //     }
-    // }, [isLoggedIn])
-
-
     useEffect(() => {
         if (searchTerm.trim() !== '') {
             const results = products.filter(product =>
@@ -129,7 +121,7 @@ const Home = () => {
 
     const handleClick = (link) => {
         setActiveLink(link); // Set the clicked link as active
-        console.log(activeLink);
+        console.log(link);
       };
     const handleLogOut = async() => {
         try {
@@ -182,7 +174,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="header-buttons">
-                        <div className='Lbox'><Link className="link" to={''} onClick={() => handleClick('home')}>Home</Link><span className={activeLink === 'home' ? 'active-line' : ''}></span></div>
+                        <div className='Lbox'><Link className="link" to={'/'} onClick={() => handleClick('home')}>Home</Link><span className={activeLink === 'home' ? 'active-line' : ''}></span></div>
                         <div className='Lbox'><Link className="link" to={''} onClick={() => handleClick('about')}>About Us</Link><span className={activeLink === 'about' ? 'active-line' : ''}></span></div>
                         <div className='Lbox'><Link className="link" to={''} onClick={() => handleClick('contact')}>Contact Us</Link><span className={activeLink === 'contact' ? 'active-line' : ''}></span></div>
                         <button className="cart-button" onClick={() => setShowCart(true)}>

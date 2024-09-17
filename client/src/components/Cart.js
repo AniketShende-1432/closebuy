@@ -107,17 +107,22 @@ const Cart = () => {
         <>
           <ul>
             {cart.map(item => (
-              <li key={item._id}>
-                <img className="cartimg" src={item.image} alt={item.name} />
-                <div>{item.name}</div>
-                <div>Quantity: {item.quantity}</div>
-                <div>Price: {item.price}</div>
+              <li key={item._id} className='cartl'>
+                <div className='cartitem'>
+                  <img className="cartimg" src={item.image} alt={item.name} />
+                  <div className='cartinfo'>
+                    <div style={{fontWeight:'bold'}}>{item.name}</div>
+                    <div>Quantity: {item.quantity}</div>
+                    <div style={{fontStyle:'italic', color:'grey'}}>Price: {item.price}</div>
+                  </div>
+                </div>
                 <button className='removebtn' onClick={() => handleRemoveFromCart(item._id, item.name)}>Remove <FontAwesomeIcon icon={faTrash} /></button>
               </li>
             ))}
           </ul>
           <div className="total">
-            Total: ₹{total.toFixed(2)}
+            <div>Total: ₹{total.toFixed(2)}</div>
+            <button className='removebtn'>Place Order</button>
           </div>
         </>
       )}

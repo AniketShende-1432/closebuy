@@ -17,7 +17,6 @@ const Foot = () => {
     <footer className="footer">
       <div className="foot">
         <div className="box1">
-          {/* <GiShoppingCart className="cart"/> */}
           <div className="bo">
             <h4>Quick Links</h4>
             <ul>

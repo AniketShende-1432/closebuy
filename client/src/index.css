@@ -215,6 +215,7 @@ body {
 
 .product-card:hover {
   transform: translateY(-10px);
+  z-index: -1;
 }
 
 .product-card img {
@@ -352,11 +353,6 @@ body {
   color: white;
   border: none;
 }
-.cart li {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-}
 
 .cart .total {
   font-weight: bold;
@@ -367,10 +363,7 @@ body {
 .sideimg {
   width: 35px;
 }
-.carth2{
-  font-size: 4rem;
-    font-family: emoji;
-}
+
 .cartimg {
   width: 15%;
 }
@@ -400,6 +393,7 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   position:sticky;
   top: 0;
+  z-index: 99999;
 }
 
 .logo-title {
@@ -430,25 +424,25 @@ body {
       margin-left: 10px;
   }
 }
+.active-line {
+  width: 90% !important; /* Make the line visible when the link is active */
+}
 .Lbox{
   display: flex;
   flex-direction: column;
-  span{
-    height: 3px;
-    display: block;
-    margin-left: 10px;
-    width: 0;
-    background-color: #28a745;
-    transition: width 0.3s ease-in-out;
-  }
+}
+.Lbox span{
+  height: 3px;
+  display: block;
+  margin-left: 9px;
+  width: 0;
+  background-color: #28a745;
+  transition: width 0.3s ease-in-out;
 }
 .Lbox:hover{
   span{
       width:90%;
   }
-}
-.active-line {
-  width: 90%; /* Make the line visible when the link is active */
 }
 .cart-button,
 .login-button {
@@ -535,3 +529,25 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
 }
+
+
+/* .active-line {
+  width: 90% !important; 
+}
+.Lbox{
+  display: flex;
+  flex-direction: column;
+}
+.Lbox span{
+  height: 3px;
+  display: block;
+  margin-left: 9px;
+  width: 0;
+  background-color: #28a745;
+  transition: width 0.3s ease-in-out;
+}
+.Lbox:hover{
+  span{
+      width:90%;
+  }
+} */
