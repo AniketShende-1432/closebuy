@@ -16,6 +16,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import UserContext from '../context/UserContext.js';
 import { IoSearchOutline } from "react-icons/io5";
 import Foot from '../components/footer/Foot.js';
+import Community from '../components/community/Community.js';
 
 const Home = () => {
 
@@ -204,6 +205,7 @@ const Home = () => {
                         </>
                     )}
                 </div>
+                <Community />
                 {searchMessage && <div className="search-message">{searchMessage}</div>}
                 <ToastContainer />
                 <Foot />

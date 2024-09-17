@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { UserContextProvider } from './context/UserContext';
+import Community from './components/community/Community';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

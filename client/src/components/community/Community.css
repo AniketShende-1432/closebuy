@@ -1,0 +1,78 @@
+.commcont{
+    display: flex;
+}
+.chead h1{
+    margin-top:4rem;
+}
+.imagep{
+    width:8rem;
+    height:8rem;
+    border-radius: 50%;
+    border:solid green;
+    position: relative;
+    top:40px;
+}
+.boxc{
+    width:12rem;
+    height:13rem;
+    background-color:antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    color:grey;
+    border:solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    padding-top: 1rem;
+    padding-bottom: 0px;
+    border-radius: 1rem;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top:-2rem;
+}
+.btn{
+    background-color:#4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.card-slider {
+    display: flex;
+    align-items: center;
+    width:960px;
+  }
+  
+  .arrow {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  
+  .card-container {
+    display: flex;
+    overflow: hidden;
+    gap:1.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .card {
+    min-width: 100px;  /* Set card width to fit 3 in the container */
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
