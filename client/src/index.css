@@ -430,7 +430,26 @@ body {
       margin-left: 10px;
   }
 }
-
+.Lbox{
+  display: flex;
+  flex-direction: column;
+  span{
+    height: 3px;
+    display: block;
+    margin-left: 10px;
+    width: 0;
+    background-color: #28a745;
+    transition: width 0.3s ease-in-out;
+  }
+}
+.Lbox:hover{
+  span{
+      width:90%;
+  }
+}
+.active-line {
+  width: 90%; /* Make the line visible when the link is active */
+}
 .cart-button,
 .login-button {
   margin: 0 10px;

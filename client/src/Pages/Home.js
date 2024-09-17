@@ -27,6 +27,7 @@ const Home = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [searchMessage, setSearchMessage] = useState('');
+    const [activeLink, setActiveLink] = useState('');
 
     const navigate = useNavigate()
 
@@ -126,7 +127,10 @@ const Home = () => {
         }
     };
 
-   
+    const handleClick = (link) => {
+        setActiveLink(link); // Set the clicked link as active
+        console.log(activeLink);
+      };
     const handleLogOut = async() => {
         try {
             const response = fetch(`${BASE_URL}/api/auth/logout`, {
@@ -178,9 +182,9 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="header-buttons">
-                        <Link className="link" to={''}>Home</Link>
-                        <Link className="link" to={''}>About Us</Link>
-                        <Link className="link" to={''}>Contact Us</Link>
+                        <div className='Lbox'><Link className="link" to={''} onClick={() => handleClick('home')}>Home</Link><span className={activeLink === 'home' ? 'active-line' : ''}></span></div>
+                        <div className='Lbox'><Link className="link" to={''} onClick={() => handleClick('about')}>About Us</Link><span className={activeLink === 'about' ? 'active-line' : ''}></span></div>
+                        <div className='Lbox'><Link className="link" to={''} onClick={() => handleClick('contact')}>Contact Us</Link><span className={activeLink === 'contact' ? 'active-line' : ''}></span></div>
                         <button className="cart-button" onClick={() => setShowCart(true)}>
                             <FontAwesomeIcon icon={faShoppingCart} /> View Cart ({cart.length})
                         </button>
